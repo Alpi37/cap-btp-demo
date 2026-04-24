@@ -1,7 +1,7 @@
 _schema-version: 3.3.0
 ID: cap-btp-demo
 version: 1.0.0
-description: "A simple CAP project - CAS Trick Version."
+description: "A simple CAP project - Forced CAS Version."
 
 parameters:
   enable-parallel-deployments: true
@@ -20,6 +20,8 @@ modules:
     parameters:
       instances: 1
       buildpack: nodejs_buildpack
+      content-target: true
+      service-name: cap-btp-demo-srv-instance
     build-parameters:
       builder: npm-ci
     provides:
